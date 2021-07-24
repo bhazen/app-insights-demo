@@ -1,0 +1,23 @@
+﻿@page
+@model ApplicationInsightsDemo.UI.Pages.WeatherModel
+@{
+}
+
+<div>
+    @if (!Model.weatherForecasts.Any())
+    {
+        <p>Could not get weather forecasts</p>
+    }
+    else
+    {
+        @foreach (var forecast in Model.weatherForecasts)
+        {
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@forecast.Date.ToShortDateString() - @forecast.TemperatureF Degrees</h5>
+                    <div class="card-text">@forecast.Summary</div>
+                </div>
+            </div>
+        }
+    }
+</div>

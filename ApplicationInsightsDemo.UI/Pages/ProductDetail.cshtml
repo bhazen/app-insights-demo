@@ -1,0 +1,11 @@
+﻿@page "{categoryId:int}/{productId}"
+@model ApplicationInsightsDemo.UI.Pages.ProductDetailModel
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Product.Name</h5>
+            <p class="card-text">@Model.Product.Description</p>
+        </div>
+    </div>
+</div>
